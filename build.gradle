@@ -1,0 +1,28 @@
+plugins {
+    id 'groovy'
+    id 'java'
+    id 'org.springframework.boot' version '2.7.3'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+}
+
+
+group 'org.gokhan'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.codehaus.groovy:groovy-all:3.0.5'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.7.3'
+    implementation group: 'org.springframework.boot', name: 'spring-boot-starter-parent', version: '2.7.3', ext: 'pom'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    testImplementation group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '2.7.3'
+}
+
+test {
+    useJUnitPlatform()
+}
